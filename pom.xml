@@ -1781,7 +1781,7 @@
   <build>
     <pluginManagement>
       <plugins>
-        <plugin>
+        <!--plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
           <version>1.4.1</version>
@@ -1800,7 +1800,7 @@
                     <version>${java.version}</version>
                   </requireJavaVersion>
                   <bannedDependencies>
-                    <excludes>
+                    <excludes-->
                       <!--
                         Akka depends on io.netty:netty, which puts classes under the org.jboss.netty
                         package. This conflicts with the classes in org.jboss.netty:netty
@@ -1808,7 +1808,7 @@
                         are under the io.netty package, so it's fine for us to depend on both
                         io.netty:netty and io.netty:netty-all.
                       -->
-                      <exclude>org.jboss.netty</exclude>
+                      <!--exclude>org.jboss.netty</exclude>
                     </excludes>
                     <searchTransitive>true</searchTransitive>
                   </bannedDependencies>
@@ -1816,7 +1816,7 @@
               </configuration>
             </execution>
           </executions>
-        </plugin>
+        </plugin-->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
